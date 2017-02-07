@@ -1,0 +1,61 @@
+//
+//  PrefixHeader.pch
+//  FishWeibo
+//
+//  Created by clip on 16/9/29.
+//  Copyright © 2016年 clip. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+//-----------------------------宏定义----------------------------
+//系统版本号
+#define KsystemVersion [[UIDevice currentDevice].systemVersion floatValue]
+
+//屏幕宽高
+#define KScreenWidth [UIScreen mainScreen].bounds.size.width
+#define KScreenHeight [UIScreen mainScreen].bounds.size.height
+
+//获取微博对象
+#define KFishWeibo ((AppDelegate *)[UIApplication sharedApplication].delegate).fishWeibo
+
+//主题字体颜色名
+#define kThemeTextColorName @"More_Item_Text_color"
+#define kThemeLineColorName @"More_Item_Line_color"
+
+//Home 微博正文颜色
+#define kHomeWeiboTextColor @"Timeline_Content_color"
+//Home 转发微博正文颜色
+#define kHomeReWeiboTextColor @"Detail_Content_color"
+//Home 时间/来源文本颜色
+#define kHomeTimeLabelTextColor @"Timeline_Time_color"
+//Home 用户名文本颜色
+#define kHomeUserNameTextColor @"Timeline_Name_color"
+//Home 微博文本链接颜色
+#define kLinkColor @"Link_color"
+
+//字体颜色key
+#define kselectColor @"selectColor"
+
+//-----------------------------头文件----------------------------
+//SinaWeibo SDK
+#import "SinaWeibo.h"
+
+#import "ThemeManage.h"
+
+#import "ThemeImageView.h"
+
+#import "ThemeButton.h"
+
+#import "ThemeLabel.h"
+
+#import "MMExampleDrawerVisualStateManager.h"
+
+#import "UIViewExt.h"
+
+//主题通知名
+#define kThemeNotificationName @"kThemeNotificationName"
+
+#endif /* PrefixHeader_pch */

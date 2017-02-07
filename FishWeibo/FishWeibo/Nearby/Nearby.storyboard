@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Base Navigation Controller-->
+        <scene sceneID="sAq-Tp-L2S">
+            <objects>
+                <navigationController storyboardIdentifier="Nearby" id="rmJ-AN-DBV" customClass="BaseNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vbc-r8-esn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5VV-XI-IRO" kind="relationship" relationship="rootViewController" id="c2T-z3-giU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xmm-a3-QOl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-508" y="314"/>
+        </scene>
+        <!--附近-->
+        <scene sceneID="7BW-Se-Zyz">
+            <objects>
+                <viewController id="5VV-XI-IRO" customClass="NearbyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Uvn-HO-i1Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kae-mD-f1V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DyG-1N-kA9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwM-CW-cXr">
+                                <rect key="frame" x="10" y="72" width="60" height="60"/>
+                                <animations/>
+                                <state key="normal" image="附近微博.jpg"/>
+                                <connections>
+                                    <action selector="nearbyWeibo:" destination="5VV-XI-IRO" eventType="touchUpInside" id="ned-ne-kXr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewp-qj-xcy">
+                                <rect key="frame" x="80" y="72" width="60" height="60"/>
+                                <animations/>
+                                <state key="normal" image="附近的人.jpg"/>
+                                <connections>
+                                    <action selector="nearbyPerson:" destination="5VV-XI-IRO" eventType="touchUpInside" id="o7R-vH-ktE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="附近" id="YMw-0K-4ac"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ELM-xC-Umw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="308"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="附近微博.jpg" width="184" height="184"/>
+        <image name="附近的人.jpg" width="184" height="184"/>
+    </resources>
+</document>
